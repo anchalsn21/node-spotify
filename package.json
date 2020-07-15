@@ -5,15 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "stop-win": "Taskkill /IM node.exe /F",
+    "stop-linux": "killall node"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
+    "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "mongoose": "^5.9.24",
     "nodemon": "^2.0.4",
     "spotify-web-api-node": "^4.0.0",
     "url": "^0.11.0"
