@@ -2,6 +2,7 @@ console.log("working test");
 const express=require('express')
 const app=express()
 const axios=require('axios');
+const path=require('path')
 const mongoose=require('mongoose')
 const cors=require('cors')
 const SpotifyUsers= require('./models/userData')
@@ -11,6 +12,8 @@ app.use(cookieParser())
 
 
 app.use(cors())
+
+app.use(express.static(path.join(__dirname,"public")))
 
 var authToken="Bearer BQDYoBgjfFRsqMgWzf53zmfuBeyPWPbm1jL1Qh0CGnNRMxxCLuci8iaUXHzIkqU2nx02mSc7-69wRTqCAvVSFDQY5bbpARy05ptIQ48XJTNgoq7pQLBu7gSz0LkzRz3tUtT5LflXytVDmOT5YNLlPWmEKIzIBVQ"
 
@@ -77,12 +80,12 @@ app.get('/login', function(req, res) {
       // spotifyApi.setAccessToken(access_token);
       // spotifyApi.setRefreshToken(refresh_token);
   
-      // res.redirect('http://localhost:3000/home');
-      res.send(data.data);
+       res.redirect(`http://localhost:3000/home.html?token=${access_token}`);
+   return   res.send(data.data);
     } catch(err) {
       console.log(err);
       
-      res.redirect('/#/error/invalid token');
+     return res.redirect('/#/error/invalid token');
     }
   });
 
