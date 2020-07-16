@@ -84,7 +84,7 @@ app.get('/login', function(req, res) {
       // spotifyApi.setAccessToken(access_token);
       // spotifyApi.setRefreshToken(refresh_token);
   
-       res.redirect(`http://localhost:3000/home.html?token=${access_token}`);
+       res.redirect(`/home.html?token=${access_token}`);
    return   res.send(data.data);
     } catch(err) {
       console.log(err);
