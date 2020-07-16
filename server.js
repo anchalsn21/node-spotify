@@ -7,7 +7,7 @@ const mongoose=require('mongoose')
 const cors=require('cors')
 const SpotifyUsers= require('./models/userData')
 var cookieParser = require('cookie-parser')
- 
+ var PORT=process.env.PORT || 3300
 app.use(cookieParser())
 
 
@@ -146,37 +146,8 @@ app.use('/', async(req, res)=>
 
 
 
-app.listen(3300, () => {
+app.listen(PORT, () => {
     console.log('App listening on port 3000!');
 });
 
 
-
-/***
- * 
- * 
- * 
-
-var my_client_id="368ece4bd8344e88a0ed7dcb52e63097"
-var redirect_uri="my-node-app"
-var client_id = '368ece4bd8344e88a0ed7dcb52e63097'; // Your client id
-var client_secret = '91270d0d0dae4c3b983fa3ca4b9befc0'; // Your secret
-var redirect_uri = 'REDIRECT_URI'; 
-var scopes = "\'user-read-private user-read-email\'"
-
-app.get('/login', async function(req, res) {
-  var scopes = 'user-read-private user-read-email';
-const data=await  axios.get('https://accounts.spotify.com/authorize' +
-    '?response_type=code' +
-    '&client_id=' + my_client_id +
-    (scopes ? '&scope=' + encodeURIComponent(scopes) : '') 
-    +
-    '&redirect_uri=' + encodeURIComponent(redirect_uri)
-    );
-    console.log("data===",data);
-    // res.send(data);
-    
-  });
-
-
- */
