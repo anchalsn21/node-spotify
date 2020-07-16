@@ -32,7 +32,7 @@ mongoose.connect( url,
 
 
 var my_client_id="368ece4bd8344e88a0ed7dcb52e63097"
-var redirect_uri="http://localhost:3000/callback"
+var redirect_uri="https://node-spotify-test-app.herokuapp.com/callback"
 var client_secret="91270d0d0dae4c3b983fa3ca4b9befc0"
 
 app.get('/', (req, res) => {
