@@ -29,7 +29,7 @@ form.addEventListener("submit", async e => {
     var result = await data.json();
 
     userDetails.innerHTML = `
-<p>${JSON.stringify(result)} </p>`;
+<pre id="json">${JSON.stringify(result)} </pre>`;
   } catch (error) {
     console.log("error==", error);
     userDetails.innerHTML = `

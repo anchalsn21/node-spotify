@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
-			integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
-			crossorigin="anonymous"
-		/>
-		<link rel="stylesheet" href="css/style.css" />
-		<title>Spotify App</title>
-	</head>
-	<body>
-		<div class="join-container">
-			<header class="join-header">
-				<h1>Spotify App</h1>
-			</header>
-			<main class="join-main">
-				<form  id="chat-form">
-					<div class="form-control">
-						<label for="username">User Id</label>
-						<input
-							type="text"
-							name="userId"
-							id="userName"
-							placeholder="Enter username..."
-							required
-						/>
-					</div>
-					<!-- <div class="form-control">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Spotify App</title>
+  </head>
+  <body>
+    <div class="join-container">
+      <header class="join-header">
+        <h1>Spotify App</h1>
+      </header>
+      <main class="join-main">
+        <form id="chat-form">
+          <div class="form-control">
+            <label for="username">User Id</label>
+            <input
+              type="text"
+              name="userId"
+              id="userName"
+              placeholder="Enter username..."
+              required
+            />
+          </div>
+          <!-- <div class="form-control">
 						<label for="room">Room</label>
 
 
@@ -43,39 +43,27 @@
 						/>
 						
 					</div> -->
-					<button  type="submit" class="btn">Get User Details</button>
-				</form>
+          <button type="submit" class="btn">Get User Details</button>
+        </form>
+      </main>
+    </div>
+    <div>
+      <br />
+      <div class="chat-messages">
+        Result :
+        <br />
+        <div id="userDetails">
+          <!-- <p>Loading....</p> -->
+        </div>
+      </div>
+    </div>
 
-				
-
-
-			</main>
-
-<div>
-		
-<br/>
-			<div class="chat-messages">
-					Result :
-			<br/>
-				<div id="userDetails">
-				  <!-- <p>Loading....</p> -->
-				  
-				</div>
-			   
-			  </div>
-
-
-			</div>
-		
-
-
-		</div>
-		<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
-		integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
-		crossorigin="anonymous"
-	  ></script>
-	  <script src="js/home.js"></script>
-	</body>
-	<!-- <script src="/socket.io/socket.io.js"></script> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.2/qs.min.js"
+      integrity="sha256-TDxXjkAUay70ae/QJBEpGKkpVslXaHHayklIVglFRT4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/home.js"></script>
+  </body>
+  <!-- <script src="/socket.io/socket.io.js"></script> -->
 </html>

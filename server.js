@@ -35,6 +35,10 @@ var my_client_id="368ece4bd8344e88a0ed7dcb52e63097"
 var redirect_uri="http://localhost:3000/callback"
 var client_secret="91270d0d0dae4c3b983fa3ca4b9befc0"
 
+app.get('/', (req, res) => {
+  res.redirect("/login")
+});
+
 app.get('/login', function(req, res) {
   var scopes = 'user-read-private user-read-email';
   res.redirect('https://accounts.spotify.com/authorize' +
@@ -84,8 +88,9 @@ app.get('/login', function(req, res) {
    return   res.send(data.data);
     } catch(err) {
       console.log(err);
-      
-     return res.redirect('/#/error/invalid token');
+      return res.send('Something went  wrong');
+
+    //  return res.send('/#/error/invalid token');
     }
   });
 
